@@ -1,0 +1,78 @@
+{
+  "animals": [
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperds",
+      "employeeId": 1
+    },
+    {
+      "id": 3,
+      "name": "Esmes",
+      "breed": "Pitbull",
+      "employeeId": 2
+    },
+    {
+      "id": 4,
+      "name": "Fluffy",
+      "breed": "Poodle",
+      "employeeId": 3
+    },
+    {
+      "name": "hermes",
+      "breed": "fluffy",
+      "id": 5
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Todd",
+      "title": "Operations Manager"
+    },
+    {
+      "id": 2,
+      "name": "Sarah",
+      "title": "Kennel Manager"
+    },
+    {
+      "id": 3,
+      "name": "Holly",
+      "title": "Clerk"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "North Nashville",
+      "address": "123 North Nash Way 37208",
+      "phone": "615-333-3203"
+    },
+    {
+      "id": 2,
+      "name": "West Nashville",
+      "address": "123 North Nash Way 37205",
+      "phone": "615-555-3203"
+    },
+    {
+      "id": 3,
+      "name": "East Nashville",
+      "address": "456 North Nash Way 37206",
+      "phone": "615-444-3203"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Sally"
+    },
+    {
+      "id": 2,
+      "name": "Howy"
+    },
+    {
+      "id": 3,
+      "name": "Jana"
+    }
+  ]
+}
