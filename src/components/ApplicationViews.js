@@ -7,8 +7,9 @@ import AnimalDetail from './animals/AnimalDetail'
 import AnimalEditForm from './animals/AnimalEditForm'
 import LocationList from './Locations/LocationList'
 import EmployeeList from './Employees/EmployeeList'
-// import EmployeeDetail from './Employees/EmployeeDetail'
+import EmployeeDetail from './Employees/EmployeeDetail'
 import EmployeeWithAnimals from './Employees/EmployeeWithAnimals'
+import EmployeeEditForm from './Employees/EmployeeEditForm'
 import OwnerList from './Owners/OwnerList'
 import OwnerDetail from './Owners/OwnerDetails'
 import AnimalForm from './animals/AnimalForm'
@@ -81,6 +82,14 @@ class ApplicationViews extends Component {
         }} /> */}
         <Route path="/employees/:employeeId(\d+)/details" render={(props) => {
         return <EmployeeWithAnimals {...props} />
+        }} />
+        <Route path="/employees/:employeeId(\d+)/edit" render={props => {
+        return <EmployeeEditForm {...props} />
+        }}
+        />
+        <Route exact path="/employees/:employeeId(\d+)" render={(props) => {
+        // Pass the animalId to the AnimalDetailComponent
+        return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} {...props}/>
         }} />
       </React.Fragment>
     )

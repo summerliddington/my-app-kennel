@@ -13,12 +13,13 @@ class Kennel extends Component {
     // Check if credentials are in local storage
     //returns true/false
     isAuthenticated = () => localStorage.getItem("credentials") !== null
+
     setUser = (authObj) => {
       /*
         For now, just store the email and password that
         the customer enters into local storage.
       */
-      sessionStorage.setItem(
+    localStorage.setItem(
         "credentials",
         JSON.stringify(authObj)
       )
@@ -27,7 +28,7 @@ class Kennel extends Component {
       });
     }
     clearUser = () => {
-      sessionStorage.clear()
+      localStorage.clear()
 
       this.setState({
           user: this.isAuthenticated()
@@ -43,8 +44,8 @@ class Kennel extends Component {
   render() {
     return (
       <>
-        <NavBar user={this.state.user} />
-        <ApplicationViews user={this.state.user} clearUser={this.clearUser}
+        <NavBar user={this.state.user} clearUser={this.clearUser} />
+        <ApplicationViews user={this.state.user}
                           setUser={this.setUser} />
       </>
     )

@@ -17,18 +17,15 @@ class Login extends Component {
 
   handleLogin = (e) => {
     e.preventDefault()
-    /*
-        For now, just store the email and password that
-        the customer enters into local storage.
-    */
-   localStorage.setItem(
-    "credentials",
-    JSON.stringify({
-        email: this.state.email,
-        password: this.state.password
-    })
-)
-this.props.history.push("/");
+{/* declareing new user and excepting the State above then invoking below. this is connected to Kennel.js */}
+  const newUser = {
+    email: this.state.email,
+    password: this.state.password,
+  }
+  this.props.setUser(newUser)
+
+  this.props.history.push("/")
+
 
   }
 
